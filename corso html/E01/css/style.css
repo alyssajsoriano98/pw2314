@@ -1,0 +1,19 @@
+     h1{
+        text-align: center;
+    }
+
+     img{ 
+        opacity: 0.5;
+        
+     }
+
+     div{
+        border: 1px solid black;
+        background-color: rgb(226, 180, 94);
+        padding-top: 50px;
+        padding-right: 50px;
+        padding-bottom: 50px;
+        padding-left: 50px;
+        margin-left: 400px;
+        
+     }

@@ -1,0 +1,49 @@
+
+
+
+.item1 { grid-area: testo1; }
+.item2 { grid-area: testo2; }
+.item3 { grid-area: testo3; }
+.item4 { grid-area: testo4; }
+.item5 { grid-area: testo5; }
+.item6 { grid-area: testo6; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'testo1 testo1 testo2 testo2'
+    'testo1 testo1 testo3 testo3'
+    'testo4 testo5 testo6 testo6';
+    /*grid-template-columns: colonna colonna colonna; (3 colonne di base)*/
+  gap: 5px;
+  background-color: #252525;
+  padding: 10px;
+  
+}
+  
+  .grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    /*border: 1px solid black;*/
+    text-align: center;
+    font-size: 30px;
+    /*grid-column-start: 1;
+    grid-column-end: 3;*/
+    
+    
+      }
+
+      /*
+      .item-nome {
+        grid-column: 3/ span2;
+        su html <div class=item-nome></div>
+      }
+       
+      .item-cognome {
+        grid-column: 3/ span2;
+      }
+
+      .item-competenze {}
+      
+      */
+
+  

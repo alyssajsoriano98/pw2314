@@ -1,0 +1,25 @@
+ul {
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0px;
+    text-align: center;
+    background-color: rgb(95, 167, 99);
+    overflow: hidden;
+    
+  }
+  
+  li {
+    display:inline-table;
+  float: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    }
+
+    li a {
+        display: block;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+    }

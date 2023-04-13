@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <form action="http://172.16.3.250:8080/index.php"
+        method="post" autocomplete="off" target="_blank"
+        >
+
+        <label for="username">Etichetta User</label>
+
+<br>
+<br>
+        <input 
+        type="text" 
+        name="username" 
+        id="username"
+        placeholder="Inserisci Nickname"
+        maxlength="10"
+        minlength="3"
+        required
+        >
+        
+        <br>
+        <br>
+    
+
+        <input 
+        type="email" 
+        name="email" 
+        id="email"
+        placeholder="Inserisci Email"
+        maxlength="10"
+        minlength="3"
+        required
+        >
+
+
+<br>
+<br>
+
+
+        <input 
+        type="password" 
+        name="Password" 
+        id="Password"
+        placeholder="Inserisci Password"
+        maxlength="50"
+        minlength="3"
+        required
+        >
+
+
+        <br>
+        <br>
+        
+        <label for="CSS">CSS</label>
+        <input type="radio" name="skill" id="CSS" value="CSS">
+        
+        <br>
+        <br>
+        
+        
+        <label for="HTML">HTML</label>
+        <input type="radio" name="skill" id="HTML" value="HTML">
+
+        <br>
+        <br>
+        
+        
+        <label for="JAVA">JAVA</label>
+        <input type="radio" 
+        name="skill" 
+        id="JAVA" 
+        value="JAVA">
+        
+        
+        <br>
+        <br>
+
+        <input type="checkbox" 
+        name="check" 
+        id="Accetta" 
+        value="Accetto le condizioni">
+        <label for="Accetta">Accetta le condizioni</label>
+        
+        <br>
+        <br>
+
+
+        <form action="/action_page.php">
+            <label for="Accetta">Scrivici le tue motivazioni</label>
+            <br><br>
+            <textarea name="message" rows="10" cols="30"></textarea>
+            <br><br>
+        
+            
+          </form>
+
+
+        <input type="submit" value="Invia"
+        >
+
+
+
+    </form>
+    
+</body>
+</html>

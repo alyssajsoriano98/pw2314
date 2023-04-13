@@ -1,0 +1,126 @@
+
+* {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+  scroll-padding-top: 150px;
+
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:darkolivegreen;
+    position: sticky;
+    top: 0;
+    font-size: auto;
+    
+    
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: darkolivegreen;
+  }
+  
+  .destra {
+      float: right;
+  
+  }
+
+
+  div {
+   /*border: 3px solid #4CAF50;*/
+   background-color: darkkhaki;
+    padding: 20px;
+    border-radius: 5px;
+    font-size: small;
+    float: left;
+    margin-bottom: 10px;
+    
+
+
+}
+
+  .luna {
+    float: left;
+    padding-right: 15px;
+    display: flex;
+    
+  }
+
+
+  .clearfix {
+    overflow: auto;
+    }
+
+
+    
+
+  .luna2 {
+    float: right;
+    padding-left: 15px;
+    display: flex;
+    
+  }
+  
+  .pre2 {
+    float: left;
+    margin-right: 20px;
+    font-size: small;
+  }
+
+  .clearfix2 {
+    overflow: auto;
+  }
+
+
+  #galleria {
+    /*border: 3px solid #4CAF50;*/
+    display: flex;
+    justify-content: space-between;
+    border-radius: 0;
+    
+  }
+  
+  #galleria div {
+    width: auto;
+  
+  }
+
+  footer {
+    text-align: center;
+    padding: 3px;
+    background-color: darkolivegreen;
+    color: white;
+    border-radius: 5px;
+    
+  }
+
+
+  footer:hover {
+    background-color: darkolivegreen;
+    
+  }
+
+  hr {
+    color: darkolivegreen;
+    border-style: groove;
+    
+    
+  }
+
+  

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <form action="http://172.16.3.250:8080/index.php"
+        method="post" autocomplete="off" target="_blank"
+        >
+
+        <label for="username">
+            <h2>Form Iscrizione Engim</h2>
+        </label>
+
+        
+        <br>
+                <input 
+                type="text" 
+                name="username" 
+                id="username"
+                placeholder="Nome"
+                maxlength="10"
+                minlength="3"
+                required
+                >
+                
+                <br>
+                <br>
+
+                <input 
+                type="text" 
+                name="username" 
+                id="username"
+                placeholder="Cognome"
+                maxlength="10"
+                minlength="3"
+                required
+                >
+                
+                <br>
+                <br>
+            
+        
+                <input 
+                type="email" 
+                name="email" 
+                id="email"
+                placeholder="Email"
+                maxlength="10"
+                minlength="3"
+                required
+                >
+
+                <input 
+                type="number" 
+                name="numero"
+                id="numero"
+                placeholder="Numero di telefono"
+                maxlength="10"
+                minlength="3"
+                required
+                >
+        
+<br><br>
+
+<label for="username">
+    Data di nascita
+</label>
+
+
+<br><br>
+
+                <input 
+                type="date" 
+                name="data" 
+                id="data"
+                required
+                >
+        
+        <br>
+        <br>
+
+        <label for="username">
+            Che corso vuoi frequentare?
+        </label>
+
+        <br><br>
+
+        <form action="/action_page.php">
+            <input list="corso" name="corso">
+            <datalist id="corso">
+              <option value="Corso HTML">
+              <option value="Corso CSS">
+              <option value="Corso BOOTSTRAP">
+              <option value="Corso JAVA">
+              <option value="Corso PYTHON">
+                
+            </datalist>
+            <input type="submit">
+          </form>        
+
+          <br>
+        <br>
+
+        <label for="titolo">
+            Titolo di studi
+        </label>
+
+        <br><br>
+
+        <form action="/action_page.php">
+            <input list="titolo" name="titolo">
+            <datalist id="titolo">
+              <option value="Licenza Media">
+              <option value="Diploma">
+              <option value="Diploma professionale">
+              <option value="Laurea">
+              <option value="Nessuno">
+                
+            </datalist>
+            <input type="submit">
+          </form>        
+
+          <br>
+          <br>
+
+          <label for="username">
+            Linguaggio di programmazione preferito
+        </label>
+          
+        <br><br>
+
+          <label for="CSS">CSS</label>
+          <input type="radio" name="skill" id="CSS" value="CSS">
+          
+          <br>
+          <br>
+          
+          
+          <label for="HTML">HTML</label>
+          <input type="radio" name="skill" id="HTML" value="HTML">
+  
+          <br>
+          <br>
+          
+          
+          <label for="JAVA">JAVA</label>
+          <input type="radio" 
+          name="skill" 
+          id="JAVA" 
+          value="JAVA">
+
+
+<br><br>
+
+
+<form action="/action_page.php">
+    <label for="Accetta">Cover Letter</label>
+    <br><br>
+    <textarea name="message" rows="10" cols="30"></textarea>
+    <br><br>
+
+    
+  </form>
+
+
+<label for="file" >Allega il CV</label>
+
+        <input 
+        type="file" 
+        name="file" 
+        id="file" >
+
+
+        <br><br>
+
+
+        <input 
+        type="submit" 
+        value="Candidati"
+        style="color:rgb(0, 0, 0);"
+        >
+
+
+
+<br>
+<br>
+    
+</body>
+</html>

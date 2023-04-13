@@ -1,0 +1,29 @@
+* {
+    background-color:rgb(103, 120, 141);
+    color: aliceblue;
+}
+
+input {
+    background-color: aliceblue;
+}
+
+ textarea {
+    background-color: aliceblue;
+    border-radius: 4px;
+    border-width: 2px;
+    border-color:rgb(73, 86, 122);
+    border-style: solid;
+ }
+
+ input {
+    background-color: aliceblue;
+    border-radius: 4px;
+    border-width: 2px;
+    border-color:rgb(73, 86, 122);
+    border-style: solid;
+ }
+
+ .file{
+
+    color:rgb(64, 75, 88);
+ }
