@@ -2,20 +2,55 @@
 <head> 
     <title>Prima lezione Javascript</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
 </head>
-    <body>
-        <div>Ciao</div>
-        <span>Altezza: </span><input type="text" id="altezza"> <br><br>
-        <span>Base: </span><input type="text" id="base"> <br>
-        
-<p id="prova">We</p>
-<h1>Nomi</h1>
-<table id=tabella>
+    
+<body>
+
+    <div class="container">
+
+    
+
+    <div class="toast position-absolute bottom-50 start-50" id='liveToast' role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <strong class="me-auto">Errore</strong>
+          <small></small>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+          Inserisci nome!
+        </div>
+      </div>
+
+      
+
+<p id="prova"></p>
+
+<table class="table table-striped-columns" id=tabella>
 <tr>
 <tr id="titolo"><th>Nomi</th></tr>
 </tr>
 </table>
-    </body>
-    <script src="esempio.js" text="text/javascript"></script>
+<br>
+
+
+
+
+<button type="button" class="btn btn-outline-danger" onclick="coloraRosso()">Colora di rosso</button>
+
+
+
+
+
+
+<br><br>
+<label>Nome: </label><br><input type="text" id="nomeNuovo" /><br><br>
+<button type="button" class="btn btn-outline-primary" onclick="aggiungiNomeNuovo()">Aggiungi nome nuovo</button>
+</div>
+
+</body>
+   
     <script src="esempio2.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </html>
