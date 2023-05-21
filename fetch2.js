@@ -26,17 +26,16 @@ function mostraPassaggio(){
 
     let table = document.createElement("table");
     
-    let innerT = '';
-  
+    let innerT = "";
+    
     innerT += "<tr class='firstRow'><th>Linea</th><th>Orario</th><th>Realtime</th></tr>";
     
     for (var i = 0; i < passaggi.length; i++)
     {
         innerT += "<tr><td>" + passaggi[i].line + "</td><td>" + passaggi[i].hour + "</td><td>" + passaggi[i].realtime;
     }
-    
     table.innerHTML = innerT;
-   
+    
     document.body.append(table);
 }
 
