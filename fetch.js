@@ -51,6 +51,7 @@ const button = document.getElementsByTagName("button")[0];
 
 button.addEventListener('click', function(){
 let numeroFermata = document.getElementById("orarioNuovo").value;
+
 fetch('https://gpa.madbob.org/query.php?stop='+numeroFermata)
 .then(response => response.json())
 .then(passaggio =>{ 
