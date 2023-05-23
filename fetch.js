@@ -1,65 +1,104 @@
-let passaggi = [
-  {
-      "line":"64","hour":"12:38:01","realtime":true},
-      {"line":"64","hour":"12:53:01","realtime":false},
-      {"line":"64","hour":"13:08:01","realtime":true},
-      {"line":"64","hour":"13:23:01","realtime":false},
-      {"line":"64","hour":"13:38:01","realtime":false},
-      {"line":"64","hour":"13:53:01","realtime":false},
-      {"line":"64","hour":"14:08:01","realtime":false}];
+//let passaggi = [{"line":"56","hour":"17:01:20","realtime":true},{"line":"56","hour":"17:05:31","realtime":true},{"line":"56","hour":"17:19:50","realtime":true},{"line":"56","hour":"17:29:17","realtime":true},{"line":"56","hour":"17:41:57","realtime":true},{"line":"56","hour":"17:57:32","realtime":true},{"line":"56","hour":"18:05:39","realtime":true},{"line":"56","hour":"18:17:39","realtime":true},{"line":"56","hour":"18:29:39","realtime":true},{"line":"56","hour":"18:41:39","realtime":false},{"line":"56","hour":"18:53:39","realtime":false}]
+
+const button = document.getElementsByTagName("button")[0];
+
+button.addEventListener('click', function(){
+
+fetch('https://gpa.madbob.org/query.php?stop=1550')
+  .then(response => response.json())
+  .then(passaggi =>{ console.log(passaggi)});    
+
+});
+
+    
+//
+
+//let nomi = ["Giacomo", "Aldo", "Giovanni", "Marina"];
+let passaggi = [{line:"56",hour:"00:15:51",realtime:"true"}]
 
 
-   
+let prossimaLinea = 56;
+aggiungiOrariListaIniziale([0]);
 
-function mostraPassaggio(line, hour){
+//
+mostraPassaggio();
 
-  let table = document.getElementById("table");
+function mostraPassaggio(orario , linea){
 
-  table.innerHTML = "";
-  let innerT = "";
+    
+    let passaggini = "";
 
-  let tr = document.createElement("tr");
-  let tdHour = document.createElement("td");
-  tdHour.className = "hour";
-  tdHour.innerHTML = hour;
-  let tdLine = document.createElement("td");
-  tdLine.innerHTML = line;
-  tr.appendChild(tdLine);
-  tr.appendChild(tdHour);
-  table.appendChild(tr);
+    passaggini += <tr>
+    <th class="th-title" id="titoloLinea">Linea</th>
+    <th class="th-title" id="titoloOrario">Orario</th>
+</tr>
+
+    let table = document.getElementById("tabella");
+    let tr = document.createElement("tr");
+    let tdOrari = document.createElement("td");
+    tdOrari.className = "orario";
+    tdOrari.innerHTML = orario;
+    let tdLinea = document.createElement("td");
+    tdLinea.innerHTML = linea;
+    tr.appendChild(tdLinea);
+    tr.appendChild(tdOrari);
+    table.appendChild(tr);
+}
+
+function mostraPassaggio(orario){
+    
+    let table = document.getElementById("tabella");
+    let tr = document.createElement("tr");
+    let tdOrari = document.createElement("td");
+    tdOrari.className = "orario";
+    tdOrari.innerHTML = orario;
+    let tdLinea = document.createElement("td");
+    tdLinea.innerHTML = prossimaLinea;
+    tr.appendChild(tdLinea);
+    tr.appendChild(tdOrari);
+    table.appendChild(tr);
+}
+
+function aggiungiOrariListaIniziale(){
 
 
-  innerT += "<tr class='firstRow'><td><b>Linea</b></td><td><b>Orari</b></td><td><b>Linea</b></td></tr>";
+    for(let i = 0; i < passaggi.length; i++){
 
-  for (var i = 0; i < passaggi.length; i++)
-  {
-    innerT += "<tr><td>" + passaggi[i].line + "</td><td>" + passaggi[i].hour + "</td><td>" + passaggi[i].realtime + "</td></tr>";
-  }
-  table.innerHTML = innerT;
-
+        mostraPassaggio(passaggi[i]);
+//
+        passaggi += "56" + passaggi[i].line + "00:15:51";
+    } 
 }
 
 
 
 
-
-mostraPassaggio();
-
-
-const button = document.getElementsByTagName("button")[0];
-
-
-button.addEventListener('click', function(){
-let numeroFermata = document.getElementById("orarioNuovo").value;
-
-fetch('https://gpa.madbob.org/query.php?stop='+numeroFermata)
-.then(response => response.json())
-.then(passaggio =>{ 
-  console.log(passaggio);
-  passaggi = passaggio;
+function mostraPassaggioNuovo(){
+    let orarioNuovo = document.getElementById('orarioNuovo').value;
    
-  mostraPassaggio();
-});    
+    if(orarioNuovo == "" || orarioNuovo == "undefined")
+        alert("Inserisci la fermata");
+    else{
+        mostraPassaggio(orarioNuovo);
+        document.getElementById('orarioNuovo').value = "";
+    }
 
-});
+}
+
+
+
+/*function mostraPassaggi(linea, orario){
+
+    let table = document.getElementById('tabella');
+    let tr = document.createElement('tr')
+    let tdLinea = document.createElement('td');
+    tdLinea.className = "linea";
+    tdLinea.innerHTML = linea;
+    let tdOrari = document.createElement('td')
+    tdOrari.innerHTML = orario;
+    tr.appendChild(tdLinea);
+    tr.appendChild(tdOrari);
+    table.appendChild(tr);
+
+}*/
 
