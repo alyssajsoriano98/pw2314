@@ -8,30 +8,36 @@
   <title>Document</title>
   <link rel="stylesheet" href="meteo.css">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
 
+<div style="background-color: #313131;">
+  <section class="vh-100" >
 
-  <section class="vh-100" style="background-color: #b2c4e9;">
     <div class="container py-5 h-100">
 
-      <div class="row d-flex justify-content-left align-items-center h-100">
+      <div class="row d-flex justify-content-left/ align-items-center">
         <div class="col-md-8 col-lg-6 col-xl-4">
+          <input class="form-control" type="text" placeholder="Latitudine" aria-label="Fermata" id="latitudine1">
+          <input class="form-control" type="text" placeholder="Longitudine" aria-label="Fermata" id="longitudine1">
+          <button type="button" class="btn btn-primary" onclick="mostraMeteo()">Posizione GPS</button>
 
-          <div class="card" style="color: #9299a5; border-radius: 35px;">
-            <div class="card-body p-4">
+      
+          <div class="card" style="border-radius: 35px;">
+            <div class="card-body">
 
               <div class="d-flex">
                 <h6 style="color: rgb(51, 51, 51);" class="flex-grow-1">Torino</h6>
                 <h6 style="color: rgb(51, 51, 51);">15:07</h6>
               </div>
               <div class="d-flex flex-column text-center mt-5 mb-4">
-                <i style="color: rgb(101, 138, 138);" class="fa fa-cloud fa-4x"></i>
+                <i style="color: rgb(221, 183, 15);" class="fa-solid fa-sun fa-4x"></i>
                 <h6 class="display-4 mb-0 font-weight-bold" style="color: #1C2331;"> 13°C </h6>
                 <span class="small" style="color: #516896">gradi</span>
               </div>
@@ -39,54 +45,53 @@
           </div>
 
           <div class="card" style="color: #474747; border-radius: 35px;">
-            <div class="card-body p-4 col-sm-8 col-sm-6 col-sm-4">
-              <div class="d-flex">
-                <h6 class="flex-grow-1">Lunedì</h6>
-                <h6 class="flex-grow-1">12°</h6>
-                <i style="color: rgb(101, 138, 138);" class="fa fa-cloud fa-2x"></i>
+            <div class="card-body" id="div1">
+              <div class="d-flex align-items-center" id="div2">
+                <h6 class="flex-grow-1 text-left" id="lunedi">Lunedì</h6>
+                <h5 class="flex-grow-1 align-items-center">12°</h5><i class="fa-solid fa-smog fa-2x"></i>
+                
               </div>
             </div>
           </div>
 
           <div class="card" style="color: #474747; border-radius: 35px;">
-            <div class="card-body p-4 col-sm-8 col-sm-6 col-sm-4">
-              <div class="d-flex">
-                <h6 class="flex-grow-1">Martedì</h6>
-                <h6 class="flex-grow-1">18°</h6>
-                <i style="color: rgb(255, 190, 50);" class="fa fa-sun-o fa-2x"></i>
-              </div>
+            <div class="card-body">
+              <div class="d-flex align-items-center">
+                <h6 class="flex-grow-1 text-left">Martedì</h6>  
+                <h5 class="flex-grow-1 align-items-center">18°</h5><i class="fa-solid fa-cloud-bolt fa-2x"></i>
+                         
+            </div>
             </div>
           </div>
 
           <div class="card" style="color: #474747; border-radius: 35px;">
-            <div class="card-body p-4 col-sm-8 col-sm-6 col-sm-4">
-              <div class="d-flex">
-                <h6 class="flex-grow-1">Mercoledì</h6>
-                <h6 class="flex-grow-1">12°</h6>
-                <i style="color: rgb(101, 138, 138);" class="fa fa-cloud fa-2x"></i>
-              </div>
+            <div class="card-body">
+              <div class="d-flex align-items-center">
+                <h6 class="flex-grow-1 text-left">Mercoledì</h6>
+                <h5 class="flex-grow-1 align-items-center">12°</h5><i class="fa-solid fa-sun fa-2x"></i>
+                
+            </div>
             </div>
           </div>
 
           <div class="card" style="color: #474747; border-radius: 35px;">
-            <div class="card-body p-4 col-sm-8 col-sm-6 col-sm-4">
-              <div class="d-flex">
-                <h6 class="flex-grow-1">Giovedì</h6>
-                <h6 class="flex-grow-1">8°</h6>
-                <i style="color: rgb(101, 138, 138);" class="fa fa-cloud fa-2x"></i>
-              </div>
+            <div class="card-body">
+              <div class="d-flex align-items-center">
+                <h6 class="flex-grow-1 text-left">Giovedì</h6>
+                <h5 class="flex-grow-1 align-items-center">13°</h5><i class="fa-solid fa-smog fa-2x"></i>
+                
+                
+            </div>
             </div>
           </div>
 
           <div class="card" style="color: #474747; border-radius: 35px;">
-            <div class="card-body p-4 col-sm-8 col-sm-6 col-sm-4">
-              <div class="d-flex">
-                <h6 class="flex-grow-1">Venerdì</h6>
-                <h6 class="flex-grow-1">19°</h6>
-                <i style="color: rgb(255, 190, 50);" class="fa fa-sun-o fa-2x"></i>
-              </div>
+            <div class="card-body">
+              <div class="d-flex align-items-center">
+                <h6 class="flex-grow-1 text-left">Venerdì</h6>
+                <h5 class="flex-grow-1 align-items-center">19°</h5><i class="fa-solid fa-cloud-bolt fa-2x"></i>
+                           
             </div>
-          </div>
 
 
 
@@ -95,6 +100,8 @@
     </div>
     </div>
   </section>
+</div>
+
 
   <script src="meteo.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"

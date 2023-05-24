@@ -9,3 +9,20 @@ h1 {
 div.card {
     margin: 30px;
 }
+
+div {
+    margin: 0;
+}
+
+h6 {
+    padding-right: 20px;
+}
+
+div.card-body {
+    padding: 20px;
+}
+
+input.form-control {
+    margin: 10px;
+}
+
