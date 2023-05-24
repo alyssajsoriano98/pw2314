@@ -17,17 +17,14 @@
 
 <body>
 
-<div style="background-color: #313131;">
+<div style="background-color: #84a1a8;">
   <section class="vh-100" >
 
     <div class="container py-5 h-100">
 
-      <div class="row d-flex justify-content-left/ align-items-center">
+      <div class="row d-flex justify-content-center align-items-center">
         <div class="col-md-8 col-lg-6 col-xl-4">
-          <input class="form-control" type="text" placeholder="Latitudine" aria-label="Fermata" id="latitudine1">
-          <input class="form-control" type="text" placeholder="Longitudine" aria-label="Fermata" id="longitudine1">
-          <button type="button" class="btn btn-primary" onclick="mostraMeteo()">Posizione GPS</button>
-
+          
       
           <div class="card" style="border-radius: 35px;">
             <div class="card-body">
@@ -47,8 +44,8 @@
           <div class="card" style="color: #474747; border-radius: 35px;">
             <div class="card-body" id="div1">
               <div class="d-flex align-items-center" id="div2">
-                <h6 class="flex-grow-1 text-left" id="lunedi">Lunedì</h6>
-                <h5 class="flex-grow-1 align-items-center">12°</h5><i class="fa-solid fa-smog fa-2x"></i>
+                <h6 class="flex-grow-1 text-left" id="giorno1">Lunedì</h6>
+                <h5 class="flex-grow-1 align-items-center" id="gradi1">12°</h5><i class="fa-solid fa-smog fa-2x" id="icona1"></i>
                 
               </div>
             </div>
@@ -57,8 +54,8 @@
           <div class="card" style="color: #474747; border-radius: 35px;">
             <div class="card-body">
               <div class="d-flex align-items-center">
-                <h6 class="flex-grow-1 text-left">Martedì</h6>  
-                <h5 class="flex-grow-1 align-items-center">18°</h5><i class="fa-solid fa-cloud-bolt fa-2x"></i>
+                <h6 class="flex-grow-1 text-left" id="giorno2">Martedì</h6>  
+                <h5 class="flex-grow-1 align-items-center" id="gradi2">18°</h5><i class="fa-solid fa-cloud-bolt fa-2x" id="icona2"></i>
                          
             </div>
             </div>
@@ -67,8 +64,8 @@
           <div class="card" style="color: #474747; border-radius: 35px;">
             <div class="card-body">
               <div class="d-flex align-items-center">
-                <h6 class="flex-grow-1 text-left">Mercoledì</h6>
-                <h5 class="flex-grow-1 align-items-center">12°</h5><i class="fa-solid fa-sun fa-2x"></i>
+                <h6 class="flex-grow-1 text-left" id="giorno3">Mercoledì</h6>
+                <h5 class="flex-grow-1 align-items-center" id="gradi3">73</h5><i class="fa-solid fa-sun fa-2x" id="icona3"></i>
                 
             </div>
             </div>
@@ -77,8 +74,8 @@
           <div class="card" style="color: #474747; border-radius: 35px;">
             <div class="card-body">
               <div class="d-flex align-items-center">
-                <h6 class="flex-grow-1 text-left">Giovedì</h6>
-                <h5 class="flex-grow-1 align-items-center">13°</h5><i class="fa-solid fa-smog fa-2x"></i>
+                <h6 class="flex-grow-1 text-left" id="giorno4">Giovedì</h6>
+                <h5 class="flex-grow-1 align-items-center" id="gradi4">13°</h5><i class="fa-solid fa-smog fa-2x" id="icona4"></i>
                 
                 
             </div>
@@ -88,8 +85,8 @@
           <div class="card" style="color: #474747; border-radius: 35px;">
             <div class="card-body">
               <div class="d-flex align-items-center">
-                <h6 class="flex-grow-1 text-left">Venerdì</h6>
-                <h5 class="flex-grow-1 align-items-center">19°</h5><i class="fa-solid fa-cloud-bolt fa-2x"></i>
+                <h6 class="flex-grow-1 text-left" id="giorno5">Venerdì</h6>
+                <h5 class="flex-grow-1 align-items-center" id="gradi5">19°</h5><i class="fa-solid fa-cloud-bolt fa-2x" id="icona5"></i>
                            
             </div>
 

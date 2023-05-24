@@ -7,11 +7,11 @@ h1 {
 }
 
 div.card {
-    margin: 30px;
+    margin: 10px;
 }
 
 div {
-    margin: 0;
+    margin-bottom: 0;
 }
 
 h6 {
@@ -25,4 +25,3 @@ div.card-body {
 input.form-control {
     margin: 10px;
 }
-
