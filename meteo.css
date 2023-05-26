@@ -1,18 +1,9 @@
-
-h1 {
-    color: white;
-    font-family: Helvetica;
-    padding: 30px;
+div.card {
+    margin: 10px;
     
 }
 
-div.card {
-    margin: 10px;
-}
 
-div {
-    margin-bottom: 0;
-}
 
 h6 {
     padding-right: 20px;
@@ -33,4 +24,18 @@ i {
 img {
     width: 20px;
     height: 20px;
+    
+}
+
+h6.flex-grow-1 {
+    color: black;
+    text-transform: capitalize;
+}
+
+h5.flex-grow-1 {
+    color: black;
+}
+
+#divv {
+    background-color: #98b7bd
 }

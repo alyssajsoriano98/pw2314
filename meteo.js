@@ -2,9 +2,9 @@ let meteo = [];//{"latitude":45.06,"longitude":7.68,"generationtime_ms":0.383973
 
 fetch('https://api.open-meteo.com/v1/forecast?latitude=45.07&longitude=7.69&current_weather=true&hourly=weathercode&timezone=CET&daily=weathercode,temperature_2m_max')
   .then(response => response.json())
-  .then(meteoOk => {
-    console.log(meteoOk);
-    meteo = meteoOk;
+  .then(meteoTorino => {
+    console.log(meteoTorino);
+    meteo = meteoTorino;
 
     mostraMeteo();
 
@@ -17,7 +17,7 @@ function mostraMeteo() {
 
   let innerT = "";
 
-  console.log(meteo);
+  // console.log(meteo);
 
   innerT += "<div2><h5></h5><h6></h6></div2>";
 
@@ -30,7 +30,7 @@ function mostraMeteo() {
 
     let idicona = "icona" + i;
 
-    console.log(id);
+    // console.log(id);
     data.setDate(data.getDate() + 1);
 
 
@@ -40,7 +40,7 @@ function mostraMeteo() {
     // console.log(meteo.daily.weathercode[i]);
     // console.log(mostraIcone(meteo.daily.weathercode[i]));
     document.getElementById(idicona).src = mostraIcone(meteo.daily.weathercode[i]);
-
+    console.log(mostraIcone(meteo.daily.weathercode[i]));
 
   }
 
@@ -48,10 +48,9 @@ function mostraMeteo() {
 
 
 
-
 function strDOW(d) {
   const locale = navigator.language;
-  console.log(d + d.toLocaleString(locale, { weekday: 'long', }));
+  // console.log(d + d.toLocaleString(locale, { weekday: 'long', }));
   return d.toLocaleString(locale, { weekday: 'long', });
 }
 
@@ -70,18 +69,46 @@ function mostraIcone(numero) {
     case 48:
       return '/svg/cloud-solid.svg';
 
+    // case 51:
+    // case 53:
+    // case 55:
+    //   return '';
+
+    // case 56:
+    // case 57:
+    //   return '';
+
+    // case 61:
+    // case 63:
+    // case 65:
+    //   return '';
+
+    // case 66:
+    // case 67:
+    //   return '';
+
+    // case 71:
+    // case 73:
+    // case 75:
+    //   return '';
+
+    // case 77:
+    //   return '';
+
     case 80:
     case 81:
     case 82:
       return '/svg/cloud-showers-heavy-solid.svg';
 
+    // case 85:
+    // case 86:
+    //   return '';
+
     case 95:
+      return '/svg/cloud-bolt-solid.svg';
     case 96:
     case 99:
       return '/svg/cloud-bolt-solid.svg';
-
-
-
 
     default: return "";
   }
