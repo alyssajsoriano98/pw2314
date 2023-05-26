@@ -47,7 +47,24 @@ function mostraMeteo() {
 
     switch (json.meteo[0].main){
       case 'Clear':
-        image.src = ''
+        image.src = 'img/sun-solid.svg'
+        break;
+
+        case 'Rain':
+        image.src = 'img/'
+        break;
+
+        case 'Fog':
+        image.src = 'img/'
+        break;
+
+        case 'Thunderstorm ':
+        image.src = 'img/'
+        break;
+
+        case 'Mainly clear':
+        image.src = 'img/'
+        break;
     }
 
   
