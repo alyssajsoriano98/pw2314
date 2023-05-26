@@ -8,15 +8,15 @@ function aggiungiNome(nome,numero){
     
     
     let table = document.getElementById("tabella");
-    let tr = document.createElement("tr");
-    let tdNome = document.createElement("td");
-    tdNome.className = "nome";
-    tdNome.innerHTML = nome;
+    let tr = document.createElement("tr"); //crea tr
+    let tdNome = document.createElement("td"); //crea td
+    tdNome.className = "nome"; //nome della classe
+    tdNome.innerHTML = nome; //oggetti all'interno
     let tdNum = document.createElement("td");
     tdNum.innerHTML = numero;
     tr.appendChild(tdNum);
     tr.appendChild(tdNome);
-    table.appendChild(tr);
+    table.appendChild(tr); //aggiunge sotto la tabella
 }
 
 function aggiungiNome(nome){
@@ -61,7 +61,13 @@ function coloraRosso(){
 // alla tabella
 function aggiungiNomeNuovo(){
     let nomeNuovo = document.getElementById('nomeNuovo').value;
-    // metodo 1: contare i tr 
+
+//nomeNuovo è l'input
+
+   
+
+
+// metodo 1: contare i tr 
     /*let numeroNuovo = document.querySelectorAll("table#tabella tr");
     console.log(numeroNuovo.length);
 
@@ -95,14 +101,14 @@ function aggiungiNomeNuovo(){
 
 
         const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
-        toastBootstrap.show();
+        toastBootstrap.show();//se input è vuoto
   
 
         }
 
         else {
             aggiungiNome(nomeNuovo);
-            document.getElementById('nomeNuovo').value = "";
+            document.getElementById('nomeNuovo').value = ""; //svuota texbox
         }
     
 
