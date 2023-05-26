@@ -14,19 +14,10 @@ function mostraMeteo() {
 
   let div1 = document.getElementById("div1");
 
-  //div1.innerHTML = "";
+
   let innerT = "";
 
   console.log(meteo);
-  // let div2 = document.createElement("div2");
-  // let h5Gradi = document.createElement("h5");
-  // h5Gradi.className = "gradi"
-  // h5Gradi.innerHTML = gradi;
-  // let h6Giorno = document.createElement("h6");
-  // h6Giorno.innerHTML = giorno;
-  // div2.appendChild(h6Giorno);
-  // div2.appendChild(h5Gradi);
-  // div1.appendChild(div2);
 
   innerT += "<div2><h5></h5><h6></h6></div2>";
 
@@ -36,54 +27,24 @@ function mostraMeteo() {
   for (let i = 1; i < 6; i++) {
     let id = "giorno" + i;
     let idgradi = "gradi" + i;
-    let idicona = "icona";
+
+    let idicona = "icona" + i;
+
     console.log(id);
     data.setDate(data.getDate() + 1);
 
-  
-    //if (idicona === "96") {
-      //idicona === '<i class="fa-solid fa-cloud-bolt fa-2x"></i>'
-    //}
 
-    switch (json.meteo[0].main){
-      case 'Clear':
-        image.src = 'img/sun-solid.svg'
-        break;
-
-        case 'Rain':
-        image.src = 'img/'
-        break;
-
-        case 'Fog':
-        image.src = 'img/'
-        break;
-
-        case 'Thunderstorm ':
-        image.src = 'img/'
-        break;
-
-        case 'Mainly clear':
-        image.src = 'img/'
-        break;
-    }
-
-  
     document.getElementById(id).innerHTML = strDOW(data);
     document.getElementById(idgradi).innerHTML = meteo.daily.temperature_2m_max[i];
-    //document.getElementById(idicona).innerHTML = meteo.daily.weathercode;
-    //innerT += "<div2><h5>" + meteo[i].gradi + "</h5><h6>" + meteo[i].giorno + "</h6></div2>";
+
+    // console.log(meteo.daily.weathercode[i]);
+    // console.log(mostraIcone(meteo.daily.weathercode[i]));
+    document.getElementById(idicona).src = mostraIcone(meteo.daily.weathercode[i]);
+
+
   }
-  //div1.innerHTML = innerT;
 
 }
-
-//mostraMeteo();
-
-// const button = document.getElementsByTagName("button")[0];
-
-
-// button.addEventListener('click', function(){
-// let latitudineNuova = document.getElementById("latitudine1")
 
 
 
@@ -92,4 +53,37 @@ function strDOW(d) {
   const locale = navigator.language;
   console.log(d + d.toLocaleString(locale, { weekday: 'long', }));
   return d.toLocaleString(locale, { weekday: 'long', });
+}
+
+function mostraIcone(numero) {
+  switch (numero) {
+
+    case 0:
+      return '/svg/sun-solid.svg';
+
+    case 1:
+    case 2:
+    case 3:
+      return '/svg/cloud-sun-solid.svg';
+
+    case 45:
+    case 48:
+      return '/svg/cloud-solid.svg';
+
+    case 80:
+    case 81:
+    case 82:
+      return '/svg/cloud-showers-heavy-solid.svg';
+
+    case 95:
+    case 96:
+    case 99:
+      return '/svg/cloud-bolt-solid.svg';
+
+
+
+
+    default: return "";
+  }
+
 }
