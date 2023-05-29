@@ -53,8 +53,13 @@ pcard.innerHTML = "920$";
 cardbody.appendChild(h5card);
 cardbody.appendChild(pcard);
 divcard.appendChild(immagine);
+divcard.appendChild(cardbody);
+colcard.appendChild(divcard);
 rowcard.appendChild(colcard);
 
-};
+console.log("ciao");
+}
+
+mostraElementi();
 
 
