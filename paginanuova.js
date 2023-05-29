@@ -46,8 +46,14 @@ let cardbody = document.createElement("div");
 cardbody.className = "card-body";
 let h5card = document.createElement("h5");
 h5card.className = "card-title";
+h5card.innerHTML = "Farfalla";
 let pcard = document.createElement("p");
 pcard.className = "card-text";
+pcard.innerHTML = "920$";
+cardbody.appendChild(h5card);
+cardbody.appendChild(pcard);
+divcard.appendChild(immagine);
+rowcard.appendChild(colcard);
 
 };
 
