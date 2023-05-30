@@ -1,3 +1,6 @@
+const container = document.getElementById('cards-container');
+
+
 let elementi = [
     {
         url: "/img/pexels-valeria-boltneva-1961772.jpg",
@@ -5,13 +8,13 @@ let elementi = [
         prezzo: "920$"
     },
     {
-        url: "/img/artem-beliaikin-6SPU6-KkyhA-unsplash.jpg",
-        titolo: "Altalena",
+        url: "/img/pexels-hiếu-hoàng-641561.jpg",
+        titolo: "Fiori",
         prezzo: "300$"
     },
     {
-        url: "/img/mohammad-alizade-CDu0x1Aiils-unsplash.jpg",
-        titolo: "Paesaggio",
+        url: "/img/pexels-mont-photographs-2948636.jpg",
+        titolo: "Nuvole",
         prezzo: "350$"
     },
     {
@@ -20,19 +23,21 @@ let elementi = [
         prezzo: "920$"
     },
     {
-        url: "/img/artem-beliaikin-6SPU6-KkyhA-unsplash.jpg",
-        titolo: "Altalena",
+        url: "/img/pexels-hiếu-hoàng-641561.jpg",
+        titolo: "Fiori",
         prezzo: "300$"
     },
     {
-        url: "/img/mohammad-alizade-CDu0x1Aiils-unsplash.jpg",
-        titolo: "Paesaggio",
+        url: "/img/pexels-mont-photographs-2948636.jpg",
+        titolo: "Nuvole",
         prezzo: "350$"
     }
+    ];
 
-];
+
 
 function mostraElementi(){
+
 let rowcard = document.getElementById("rowcard");
 let colcard = document.createElement("div");
 colcard.className = "col";
@@ -57,9 +62,13 @@ divcard.appendChild(cardbody);
 colcard.appendChild(divcard);
 rowcard.appendChild(colcard);
 
-console.log("ciao");
-}
+
+for (let i = 0; i < elementi.length; i++){
+    let titoli = "titolo" + i;
+    console.log(elementi[i]);   
+};
+
+};
+
 
 mostraElementi();
-
-
