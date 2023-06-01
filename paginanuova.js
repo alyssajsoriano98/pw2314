@@ -1,7 +1,6 @@
-const container = document.getElementById('cards-container');
-
 
 let elementi = [
+
     {
         url: "/img/pexels-valeria-boltneva-1961772.jpg",
         titolo: "Farfalla",
@@ -39,6 +38,17 @@ let elementi = [
 function mostraElementi(){
 
 let rowcard = document.getElementById("rowcard");
+/*
+let lista = 
+
+for (let elemento of elementi){
+
+    url.innerHTML = elemento.url
+    
+
+};
+*/
+
 let colcard = document.createElement("div");
 colcard.className = "col";
 let divcard = document.createElement("div");
@@ -63,12 +73,22 @@ colcard.appendChild(divcard);
 rowcard.appendChild(colcard);
 
 
-for (let i = 0; i < elementi.length; i++){
-    let titoli = "titolo" + i;
-    console.log(elementi[i]);   
-};
 
 };
 
 
 mostraElementi();
+
+/*
+let lista = 
+
+for (let elemento of elementi){
+
+};
+
+
+
+classList - una classe
+className - più classi
+*/
+

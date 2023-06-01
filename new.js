@@ -20,6 +20,7 @@ for(let oggetto of oggetti){
     let titolo = document.createElement("h5");
     let data = document.createElement("p");
     let bottone = document.createElement("button");
+    let form = document.createElement("form")
     
     titolo.innerHTML = oggetto.titolo;
     data.innerHTML = oggetto.data;
