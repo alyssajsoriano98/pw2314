@@ -1,0 +1,23 @@
+footer {
+   
+    bottom: 0;
+    width: 100%;
+    font-size: small;
+    text-align: center;
+     background-color: rgb(78, 78, 78);
+     color: white;
+     padding: 20px;
+  }
+
+  .col-sm {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+.card-text {
+  font-size: small;
+}
+  p{
+    font-size: small;
+  }
+
