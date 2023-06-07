@@ -8,7 +8,7 @@ let esperienze = [{
     testo: "Exceptionally well organized and resourceful Professional with more than six years experience and a solid academic background in accounting and financial management; excellent analytical and problem solving skills; able to handle multiple projects while producing high quality work in a fast-paced, deadline-oriented environment."
 },
 {
-    sezione: "Esperienza lavorativa",
+    sezione: "Esperienza Lavorativa",
     titolo: "Accounting and Financial Management",
     dataDa: "dal 2010",
     dataA: "al 2020",
@@ -75,7 +75,7 @@ for(let oggetto of esperienze){
 //
     container.appendChild(rowcard);
     rowcard.appendChild(colCard);
-
+//classi
     container.className = "container text-center";
     rowcard.className = "row";
     colCard.className = "col-sm";
@@ -160,28 +160,105 @@ bottone.onclick = function aggiungiNuovaCard (){
 
 };
 
-//fetch1
+
+//fetch
+
+let meteo = [];//{"latitude":45.06,"longitude":7.68,"generationtime_ms":0.3839731216430664,"utc_offset_seconds":7200,"timezone":"Europe/Paris","timezone_abbreviation":"CEST","elevation":241.0,"current_weather":{"temperature":25.2,"windspeed":8.0,"winddirection":36.0,"weathercode":2,"is_day":1,"time":"2023-05-24T14:00"},"hourly_units":{"time":"iso8601","weathercode":"wmo code"},"hourly":{"time":["2023-05-24T00:00","2023-05-24T01:00","2023-05-24T02:00","2023-05-24T03:00","2023-05-24T04:00","2023-05-24T05:00","2023-05-24T06:00","2023-05-24T07:00","2023-05-24T08:00","2023-05-24T09:00","2023-05-24T10:00","2023-05-24T11:00","2023-05-24T12:00","2023-05-24T13:00","2023-05-24T14:00","2023-05-24T15:00","2023-05-24T16:00","2023-05-24T17:00","2023-05-24T18:00","2023-05-24T19:00","2023-05-24T20:00","2023-05-24T21:00","2023-05-24T22:00","2023-05-24T23:00","2023-05-25T00:00","2023-05-25T01:00","2023-05-25T02:00","2023-05-25T03:00","2023-05-25T04:00","2023-05-25T05:00","2023-05-25T06:00","2023-05-25T07:00","2023-05-25T08:00","2023-05-25T09:00","2023-05-25T10:00","2023-05-25T11:00","2023-05-25T12:00","2023-05-25T13:00","2023-05-25T14:00","2023-05-25T15:00","2023-05-25T16:00","2023-05-25T17:00","2023-05-25T18:00","2023-05-25T19:00","2023-05-25T20:00","2023-05-25T21:00","2023-05-25T22:00","2023-05-25T23:00","2023-05-26T00:00","2023-05-26T01:00","2023-05-26T02:00","2023-05-26T03:00","2023-05-26T04:00","2023-05-26T05:00","2023-05-26T06:00","2023-05-26T07:00","2023-05-26T08:00","2023-05-26T09:00","2023-05-26T10:00","2023-05-26T11:00","2023-05-26T12:00","2023-05-26T13:00","2023-05-26T14:00","2023-05-26T15:00","2023-05-26T16:00","2023-05-26T17:00","2023-05-26T18:00","2023-05-26T19:00","2023-05-26T20:00","2023-05-26T21:00","2023-05-26T22:00","2023-05-26T23:00","2023-05-27T00:00","2023-05-27T01:00","2023-05-27T02:00","2023-05-27T03:00","2023-05-27T04:00","2023-05-27T05:00","2023-05-27T06:00","2023-05-27T07:00","2023-05-27T08:00","2023-05-27T09:00","2023-05-27T10:00","2023-05-27T11:00","2023-05-27T12:00","2023-05-27T13:00","2023-05-27T14:00","2023-05-27T15:00","2023-05-27T16:00","2023-05-27T17:00","2023-05-27T18:00","2023-05-27T19:00","2023-05-27T20:00","2023-05-27T21:00","2023-05-27T22:00","2023-05-27T23:00","2023-05-28T00:00","2023-05-28T01:00","2023-05-28T02:00","2023-05-28T03:00","2023-05-28T04:00","2023-05-28T05:00","2023-05-28T06:00","2023-05-28T07:00","2023-05-28T08:00","2023-05-28T09:00","2023-05-28T10:00","2023-05-28T11:00","2023-05-28T12:00","2023-05-28T13:00","2023-05-28T14:00","2023-05-28T15:00","2023-05-28T16:00","2023-05-28T17:00","2023-05-28T18:00","2023-05-28T19:00","2023-05-28T20:00","2023-05-28T21:00","2023-05-28T22:00","2023-05-28T23:00","2023-05-29T00:00","2023-05-29T01:00","2023-05-29T02:00","2023-05-29T03:00","2023-05-29T04:00","2023-05-29T05:00","2023-05-29T06:00","2023-05-29T07:00","2023-05-29T08:00","2023-05-29T09:00","2023-05-29T10:00","2023-05-29T11:00","2023-05-29T12:00","2023-05-29T13:00","2023-05-29T14:00","2023-05-29T15:00","2023-05-29T16:00","2023-05-29T17:00","2023-05-29T18:00","2023-05-29T19:00","2023-05-29T20:00","2023-05-29T21:00","2023-05-29T22:00","2023-05-29T23:00","2023-05-30T00:00","2023-05-30T01:00","2023-05-30T02:00","2023-05-30T03:00","2023-05-30T04:00","2023-05-30T05:00","2023-05-30T06:00","2023-05-30T07:00","2023-05-30T08:00","2023-05-30T09:00","2023-05-30T10:00","2023-05-30T11:00","2023-05-30T12:00","2023-05-30T13:00","2023-05-30T14:00","2023-05-30T15:00","2023-05-30T16:00","2023-05-30T17:00","2023-05-30T18:00","2023-05-30T19:00","2023-05-30T20:00","2023-05-30T21:00","2023-05-30T22:00","2023-05-30T23:00"],"weathercode":[0,0,0,0,0,1,0,1,0,0,1,3,1,2,2,2,2,80,96,80,61,61,96,95,61,61,61,61,63,95,95,80,80,80,80,80,80,80,80,96,95,80,3,80,80,3,1,1,1,2,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,3,3,3,0,1,1,3,3,3,3,2,2,2,3,3,3,80,80,80,80,80,80,80,80,80,95,95,95,3,3,3,3,3,3,80,80,80,3,3,3,3,3,3,1,1,1,1,1,1,45,45,45,80,80,80,3,3,3,80,80,80,95,95,95,80,80,80,80,80,80,80,80,80,80,80,80,95,95,95,3,3,3,80,80,80,3,3,3,95,95,95]},"daily_units":{"time":"iso8601","weathercode":"wmo code"},"daily":{"time":["2023-05-24","2023-05-25","2023-05-26","2023-05-27","2023-05-28","2023-05-29","2023-05-30"],"weathercode":[96,96,2,80,95,95,95]}};
+
+fetch('https://api.open-meteo.com/v1/forecast?latitude=45.07&longitude=7.69&current_weather=true&hourly=weathercode&timezone=CET&daily=weathercode,temperature_2m_max')
+  .then(response => response.json())
+  .then(meteoTorino => {
+    console.log(meteoTorino);
+    meteo = meteoTorino;
+
+    mostraMeteo();
+
+  });
+
+function mostraMeteo() {
+
+    let data = new Date();
+
+for (let i = 1; i < 6; i++) {
+    let giorno = "giorno";
+    let gradi = "gradi";
+    let weathercode = "weathercode";
+
+    // console.log();
+
+
+    document.getElementById(giorno).innerHTML = strDOW(data);
+    document.getElementById(gradi).innerHTML = meteo.daily.temperature_2m_max[0];
+    document.getElementById(weathercode).innerHTML = mostraWeatherCode(meteo.daily.weathercode[0]);
+ 
+  }
+
+}
+
+function strDOW(d) {
+  const locale = navigator.language;
+  return d.toLocaleString(locale, { weekday: 'long', });
+}
+
+
+function mostraWeatherCode(numero) {
+  switch (numero) {
+
+    case 0:
+      return "Cielo sereno";
+
+    case 1:
+    case 2:
+    case 3:
+      return "Prevalentemente sereno, parzialmente nuvoloso e coperto";
+
+    case 45:
+    case 48:
+      return "Nebbia e nebbia di brina depositante";
+
+    case 51:
+    case 53:
+    case 55:
+      return "Pioggerella: intensità leggera, moderata e densa";
+
+    case 56:
+    case 57:
+      return "Pioggia gelata: intensità leggera e densa";
+
+    case 61:
+    case 63:
+    case 65:
+      return "Pioggia: intensità leggera, moderata e forte";
+
+    case 66:
+    case 67:
+      return "Pioggia gelata: intensità leggera e pesante";
+
+    case 71:
+    case 73:
+    case 75:
+      return "Nevicate: intensità leggera, moderata e forte";
+
+    case 77:
+      return "Granelli di neve";
+
+    case 80:
+    case 81:
+    case 82:
+      return "Rovesci di pioggia: leggeri, moderati e violenti";
+
+    case 85:
+    case 86:
+      return "Nevicate leggere e intense";
+
+    case 95:
+      return "Temporale: debole o moderato";
+    case 96:
+    case 99:
+      return "Temporale con lieve e forte grandine";
+
+    default: return "";
+  }
+
+}
   
-//   fetch('https://gpa.madbob.org/query.php?stop='+numeroFermata)
-//   .then(response => response.json())
-//   .then(passaggio =>{ 
-//     console.log(passaggio);
-
-//fetch2
-
-// let qualcosa
-
-// fetch('https://api.open-meteo.com/v1/forecast?latitude=45.07&longitude=7.69&current_weather=true&hourly=weathercode&timezone=CET&daily=weathercode,temperature_2m_max')
-//   .then(response => response.json())
-//   .then(fetchQualcosa => {
-//     console.log(fetchQualcosa);
-//     meteo = fetchQualcosa;
-
-//     mostraFunzione();
-
-//   });
-
-// function mostraFunzione() {
-
-//   //scrivi cose
-// }

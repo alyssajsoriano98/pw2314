@@ -69,21 +69,26 @@
 
   <!--container del form-->
 
-
   <div class="col-6 mb-3 container text-center">
 
     <!--input sezione-->
 
-    <div class="input-group">
+    <!-- <div class="input-group">
       <span class="input-group-text">Sezione</span>
       <input type="text" id="sezioneInput" aria-label="sezione" class="form-control">
-    </div>
+    </div> -->
+    <select class="form-select" aria-label="Default select example" id="sezioneInput">
+      <option selected>Scegli la sezione</option>
+      <option value="Profilo">Profilo</option>
+      <option value="Esperienza Lavorativa">Esperienza Lavorativa</option>
+      <option value="Istruzione">Istruzione</option>
+    </select>
 
     <!--input titolo-->
     <br>
     <div class="input-group">
       <span class="input-group-text">Titolo</span>
-      <input type="text" id="titoloInput" aria-label="titolo" class="form-control" id="titolo">
+      <input type="text" id="titoloInput" aria-label="titolo" class="form-control" id="titolo" placeholder="Titolo esperienza">
     </div>
 
     <!--input data-->
@@ -91,9 +96,9 @@
     <br>
     <div class="input-group">
       <span class="input-group-text">Anno inizio</span>
-      <input type="text" id="dataDaInput" aria-label="dataDa" class="form-control">
+      <input type="text" id="dataDaInput" aria-label="dataDa" class="form-control" placeholder="dal . . .">
       <span class="input-group-text">Anno fine / In corso</span>
-      <input type="text" id="dataAInput" aria-label="dataA" class="form-control">
+      <input type="text" id="dataAInput" aria-label="dataA" class="form-control" placeholder="al . . .">
     </div>
 
     <!--input luogo-->
@@ -101,40 +106,47 @@
     <br>
     <div class="input-group">
       <span class="input-group-text">Luogo</span>
-      <input type="text" id="luogoInput" aria-label="luogo" class="form-control">
+      <input type="text" id="luogoInput" aria-label="luogo" class="form-control" placeholder="es. Torino , Italia">
     </div>
 
     <!--input testo-->
     <br>
     <div class="input-group">
       <span class="input-group-text">Testo</span>
-      <textarea class="form-control" id="testoInput" aria-label="testo"></textarea>
+      <textarea class="form-control" id="testoInput" aria-label="testo" placeholder="Scrivi qui il testo della tua esperienza"></textarea>
     </div>
 
 
     <!--bottone-->
     <br>
     <div class="d-grid gap-2 d-md-flex justify-content-center">
-      <button class="btn btn-primary" id="bottone" onclick="aggiungiNuovaCard()" type="button">Aggiungi Nuova
+      <button type="button" class="btn btn-primary" id="bottone" onclick="aggiungiNuovaCard()">Aggiungi Nuova
         Sezione</button>
     </div>
   </div>
 
- 
 
- <!--fetch-->
+  <!--fetch-->
+
   <div class="container p-5" id="divContainerFetch">
-    <div class="row d-flex justify-content-center align-items-center" id="rowFetch">
-      <div class="col-md-8 col-lg-6 col-xl-4" id="classiFetch">
+    <div class="row d-flex justify-content-center" id="rowFetch">
+      <div class="col-md-8 col-lg-6 col-xl-4" id="divFetch">
 
-        <div class="card" id="cardFetch" style="color: #ffffff;background-color: #6a8c92; border-radius: 20px;">
-          <div class="card-body" id="cardBodyFetch">
-            <div class="d-flex align-items-center">
-              <h6 class="flex-grow-1 text-center" id="città">Torino</h6>
-              <h6 class="flex-grow-1 text-center" id="giorno">Lunedì</h6>
-              <h6 class="flex-grow-1 text-center" id="gradi">73 gradi</h6>
-            </div>
+        <div class="card">
+          <div class="card-header text-center">
+            Meteo Torino
           </div>
+          <ul class="list-group list-group-flush text-center">
+            <li class="list-group-item">
+              <h6 class="flex-grow-1" id="giorno">Lunedì</h6>
+            </li>
+            <li class="list-group-item">
+              <h5 class="flex-grow-1" id="gradi">12°</h5>
+            </li>
+            <li class="list-group-item">
+              <h6 class="flex-grow-1" id="weathercode">Sole</h6>
+            </li>
+          </ul>
         </div>
 
       </div>

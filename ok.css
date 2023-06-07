@@ -17,7 +17,21 @@ footer {
 .card-text {
   font-size: small;
 }
-  p{
-    font-size: small;
-  }
 
+
+#giorno {
+    color: rgb(59, 59, 59);
+    text-transform: capitalize;
+}
+
+#weathercode {
+  color: rgb(59, 59, 59);
+}
+#gradi {
+  
+color: rgb(59, 59, 59);
+}
+
+#divv {
+    background-color: #98b7bd
+}
